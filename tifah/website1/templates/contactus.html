@@ -1,0 +1,35 @@
+{%  load static %}
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yami fast foods</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+   <!-- <link rel="stylesheet" href="design.js">-->
+    <a href="home.html">Home</a>
+    <script>
+        function successfull(){
+    alert("submitted successfully");
+
+
+}
+    </script>
+</head>
+<body style="background-color: rgb(102, 102, 204);">
+    <h1 id="order">Ordering </h1>
+    <form action="" method="POST">
+      <p><input type="text" class="form" id="" placeholder="Name"></p>
+     <p><input type="text" class="form" id="" placeholder="Contact"></p>
+    <p><input type="text" class="form" id="" placeholder="address"></p>
+     <p><input type="text" class="form" id="" placeholder="amount"></p>
+     <p><input type="text" class="form" id="" placeholder="date"></p>
+    </form>
+    
+       <button onclick="successfull()" style="background-color: rgb(223, 105, 105)">order now</button>
+    </form>
+
+    <a href="{% url 'home_page' %}">home</a>
+</body>
+</html>

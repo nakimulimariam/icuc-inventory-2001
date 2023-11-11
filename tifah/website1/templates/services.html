@@ -1,0 +1,51 @@
+{%  load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yami fast foods</title>
+    <link rel="stylesheet" href="design.js">
+    <link rel="stylesheet" href="style.css">
+    <a href="home.html">Home</a>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body style="background-color: blueviolet;">
+    <h1 id="Our">Services</h2>
+    <div id="how you can access our services">
+        <h2>Digital marketing services and social media services</h2>
+        <p>Through these services, one can
+           easily access our website
+           and purchase whatever he/she likes.
+        </p>
+    </div>
+    <div id="knowledge base">
+        <h2>digital marketing and social media</h2>
+        <p>through digital marketig,you can
+           post your products online sothat 
+           constomers can purchase them.
+           social media also helps to promote 
+            the business ever since many are using 
+           it to do different things </p>
+           
+    </div>
+
+    <div id="customers">
+        <h2>handling of customers</h2>
+        <p><br>We provide customer care
+            and handle them with care
+            since they are our bosses.
+        </p>
+    </div>
+    <div id="food">
+        <h2>quality</h2>
+        <p>We provide different types of food
+           which are delicious and are liked 
+           by the customers for examples
+           chip, chicken and others.
+            
+        </p>
+    </div>
+    <a href="{% url 'gallery_page' %}">gallery</a>
+</body>
+</html>

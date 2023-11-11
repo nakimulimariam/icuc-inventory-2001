@@ -1,0 +1,38 @@
+{%  load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yami fast foods
+
+    </title>
+</head>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="design.js">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body style="background-color: rgb(73, 201, 159);">
+<div style="color: rgb(81, 181, 148);">
+<div id="title">
+    <h1 style="color: brown;text-align: center;">YAMI FAST FOODS</h1>
+</div>
+
+<div id="menu">
+    <ul style="color: blanchedalmond;">
+        <li><a href="home.html" id="hm">Home</li></a>
+        <li><a href="About Us.html" id="About">About Us</li></a>
+        <li><a href="services.html" id="Ss">Services</li></a>
+        <li><a href="gallery.html" id="pics">Gallery</li></a>
+        <li><a href="contact us.html" id="CU">Contact Us</li></a>
+
+    </ul>
+</div>
+</div>
+<div id="image">
+  <img src="{% static 'images/IMG-20230929-WA0009.jpg' %}" class="image" width="px"alt="">
+</div>
+<a href="{% url 'aboutus_page' %}">aboutus</a>
+</body>
+
+</html>

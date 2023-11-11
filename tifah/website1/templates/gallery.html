@@ -1,0 +1,31 @@
+{%  load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yami fast food</title>
+    <a href="home.html">Home</a>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="design.js">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    
+</head>
+
+<body style="background-color: aquamarine;">
+    <div id="img-a">
+    <img src="{% static 'images/IMG-20230929-WA0005.jpg' %}" class="image" width="200px" alt="This is an image">
+    <img src="{% static 'images/IMG-20230929-WA0006.jpg' %}" class="image" width="200px"alt="">
+    <img src="{% static 'images/IMG-20230929-WA0007.jpg' %}" class="image" width="200px"alt="">
+    <img src="{% static 'images/IMG-20230929-WA0008.jpg' %}" class="image" width="200px"alt="">
+    <img src="{% static 'images/IMG-20230929-WA0009.jpg' %}" class="image" width="200px"alt="">
+    
+   
+    
+    </div>
+    <a href="{% url 'contactus_page' %}">contactus</a>
+    
+</body>
+
+</html>

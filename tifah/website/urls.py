@@ -1,5 +1,5 @@
 """
-URL configuration for inventory project.
+URL configuration for website project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -16,19 +16,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from inventory.view import index_view
-from inventory.view import home_view
-from inventory.view import AboutUs_view
-from inventory.view import gallery_view
-from inventory.view import servicesoffered_view
-from inventory.view import contactUs_view
+from website1.views import home_view, aboutus_view, gallery_view, services_view, contactus_view
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',index_view,name='index_page'),
-     path('',home_view,name='home_page'),
-      path('',AboutUs_view,name='AboutUs_page'),
-       path('',gallery_view,name='gallery_page'),
-        path('',servicesoffered_view,name='servicesoffered_page'),
-         path('',contactUs_view,name='contactUs_page'),
+    path('',home_view,name='home_page'),
+    path('aboutus/',aboutus_view,name='aboutus_page'),
+    path('gallery/',gallery_view,name='gallery_page'),
+    path('services/',services_view,name='services_page'),
+    path('contactus/',contactus_view,name='contactus_page'),
 ]
+
