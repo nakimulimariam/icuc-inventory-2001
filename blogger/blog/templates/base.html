@@ -1,0 +1,53 @@
+<html>
+    {% load  static %}
+    
+    <head>
+    <title>Django Blog</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    
+
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">My Blog</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                {% if user.is_authenticated %}
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href=" {% url 'index_page' %}">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'add_author_page' %}">Authors</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'blog_list_page' %}">blogs</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'logout' %}">logout </a>
+                  </li>
+                {% else %}
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'sign_up_page' %}">sign up</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'login' %}">login </a>
+                  </li>
+                {% endif %}
+                  
+                  
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <div class="container">
+               {% block content  %}
+        
+               {% endblock content  %}
+          </div>
+        
+    </body>
+</html>
